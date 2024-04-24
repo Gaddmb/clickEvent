@@ -1,0 +1,59 @@
+/* "designe tout les elements"  */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+}
+
+/* si je mets la font dans body les bouton ne prendra pas  */
+/* body a une margin de base donc je reset  */
+
+body {
+  text-align: center;
+  margin: 0;
+  color: white;
+  min-height: 200vh;
+}
+
+.box {
+  border: 6px solid white;
+  /* pour la transition de ma div box  */
+  background: black;
+  padding: 10px;
+}
+
+/* je ne fais pas un display none car sinon il disparait totalement de l'ecran pour cela c'est mieux de faire un propriete visibility:hidden  */
+
+p {
+  visibility: hidden;
+  width: 240px;
+  margin: 10px auto 0;
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(-200px);
+}
+
+h4 {
+  transition: 1s ease;
+}
+
+/* je viens de me crée une classe que je vais injecté directement dans mon JS pour éviter une répétition*/
+.question-clicked {
+  background: rgb(47, 47, 47);
+  border-radius: 30px;
+  border: 6px dashed pink;
+}
+
+.true-response {
+  background-color: green;
+}
+.false-response {
+  background-color: red;
+}
+
+/* je re injecte une classe  */
+.show-response {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
